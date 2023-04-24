@@ -6,29 +6,29 @@ body {
   font-family: Lato, sans-serif;
 }
 
-.aaa {
+.matrix {
   width: 500px;
   margin: 0 auto;
   display: block;
   text-align: right;
 }
 
-.aaa img {
+.matrix__img {
   width: 100%;
 }
 
-.aaa .more_inf {
+.matrix__link {
   font-family: fantasy, cursive;
 }
 
 @media (max-width: 768px) {
 
-  .aaa { text-align: center;
+  .matrix { text-align: center;
   }
 
 }
 
-.centered-main-page-element {
+.tasks {
   display: block;
   width: 500px;
   margin: 0 auto 0;
@@ -40,22 +40,18 @@ body {
   flex-grow: 1;
 }
 
-.task-row-wrapper {
+.tasks__add {
   display: flex;
+  padding: 20px 0;
 }
 
-ul {
+.tasks__incomplete,
+.tasks__completed {
   margin: 0;
   padding: 0px;
 }
 
-li,
-h3 {
-  list-style: none;
-}
-
-input,
-button{
+input {
   outline: none;
 }
 
@@ -67,6 +63,7 @@ button {
   width: 60px;
   font-family: Lato, sans-serif;
   cursor: pointer;
+  outline: none;
 }
 
 button:hover {
@@ -75,8 +72,7 @@ button:hover {
 
 /* Heading */
 
-h3,
-label[for="new-task"] {
+.tasks__title {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -105,12 +101,7 @@ input[type="text"]:focus {
 
 /* New Task */
 
-label[for="new-task"] {
-  display: block;
-  margin: 0 0 20px;
-}
-
-input#new-task {
+.task_add {
   width: 318px;
 }
 
@@ -123,6 +114,7 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  list-style: none;
 }
 
 li > * {
@@ -144,19 +136,19 @@ li > input[type="text"] {
   width: 226px;
 }
 
-button.delete img {
+.delete_img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-button.delete img:hover {
+.delete_img:hover {
   transform: rotateZ(0);
 }
 
 /* Completed */
 
-ul#completed-tasks label { 
+.tasks__completed label { 
   text-decoration: line-through;
   color: #888;
 }
@@ -167,11 +159,11 @@ ul li input[type=text] {
   display: none;
 }
 
-ul li.editMode input[type=text] {
+ul li.edit_mode input[type=text] {
   display: inline-block;
   width: 224px;
 }
 
-ul li.editMode label {
+ul li.edit_mode label {
   display: none;
 }
