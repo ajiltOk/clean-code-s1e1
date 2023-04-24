@@ -102,7 +102,9 @@ input[type="text"]:focus {
 /* New Task */
 
 .task_add {
-  width: 318px;
+  border: 1px solid #dDd;
+  border-radius: 6px;
+  padding: 0 9px;
 }
 
 /* Task list */
@@ -136,13 +138,13 @@ li > input[type="text"] {
   width: 226px;
 }
 
-.delete_img {
+button img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-.delete_img:hover {
+button img:hover {
   transform: rotateZ(0);
 }
 
